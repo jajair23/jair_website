@@ -31,7 +31,7 @@ header {
     align-items: center;
     justify-content: center;
     /* border-bottom: 1px solid #333; */
-    width: 100%;
+    width: calc(100% - 15px);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
