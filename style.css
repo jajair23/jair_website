@@ -1,0 +1,270 @@
+/* Reset default styling (optional if using a separate css_reset.css) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Base styles */
+body.dark-theme {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+a {
+  color: #131313;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #29232394;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-bottom: 1px solid #333; */
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+nav {
+    display: flex
+;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li .button {
+  color: #f0f0f0;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+/* nav ul li .button:hover {
+    background-color: #333;
+} */
+
+/* Sections */
+main section {
+  padding: 60px 40px;
+  border-bottom: 1px solid #222;
+}
+
+main section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #00bcd4;
+}
+
+main section h3 {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #80deea;
+}
+
+main section p, main section li {
+  margin-bottom: 10px;
+}
+
+/* Home Section */
+#home {
+  text-align: center;
+  background: linear-gradient(to right, #540a0a, #6b1414, #540909);
+}
+
+#home h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+#home p {
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+/* Footer */
+footer {
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  main section {
+    padding: 40px 20px;
+  }
+}
+
+
+
+/* home section with additional settings*/
+
+#home .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 120px;
+}
+
+#home .container .jair_photo_formal {
+    margin: 10px;
+}
+
+
+header div.header_logo img {
+    height: 70px !important;
+    margin: 10px;
+}
+
+.header_cta {
+    /* background: #FFFFFF; */
+        background-image: linear-gradient(180deg, rgb(139 107 14), rgb(197 168 25));
+    padding: 7px;
+    border-radius: 10px;
+    color: #104a7d;
+    text-decoration-style: none;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.header_cta a {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+
+
+/* section full screen */
+
+section.full-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    padding-top: 80px;
+}
+
+main>div.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+
+footer {
+    display: none;
+}
+
+header {
+    position: absolute;
+    height: 80px;
+    z-index: 9999;
+}
+
+#contact {
+    position: relative;
+}
+
+#contact>div.container>div.copyright {
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+/* card effect on formal photo */
+
+div.photo-card-container {
+    width: 500px;
+    height: 500px;
+    background: #07182E;
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+div.photo-card-container::before {
+    content: '';
+    position: absolute;
+    width: 320px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 180%;
+    animation: rotBGimg 3.5s linear infinite;
+    transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+div.photo-card-container::after {
+    content: '';
+    position: absolute;
+    background: #07182E;
+    inset: 5px;
+    border-radius: 20px;
+}
+
+div.photo-card {
+    z-index: 1;
+    margin: 5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+div.photo-card img {
+    z-index: 1;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 20px;
+}

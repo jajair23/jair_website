@@ -1,0 +1,225 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+#tools .banner{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+		background: linear-gradient(to right, #aea642, #ae2828, #620b65);
+}
+#tools .banner .slider{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+
+#tools .banner .slider2{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    bottom: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun2 20s linear infinite;
+    z-index: 2;
+}
+
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-7deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-7deg) rotateY(-360deg);
+    }
+}
+
+@keyframes autoRun2{
+    from{
+        transform: perspective(1000px) rotateX(7deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(7deg) rotateY(360deg);
+    }
+}
+
+
+
+#tools .banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(550px);
+	border-radius: 15px;
+	-webkit-box-reflect: below 2px linear-gradient(transparent, transparent, rgba(4, 4, 4, 0.267));
+}
+
+#tools .banner .slider2 .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(550px);
+	border-radius: 15px;
+	-webkit-box-reflect: below 2px linear-gradient(transparent, transparent, rgba(4, 4, 4, 0.267));
+}
+
+#tools .banner .slider:hover,
+#tools .banner .slider2:hover {
+	animation-play-state: paused;
+}
+
+#tools .banner .slider .item img{
+    width: 100%;
+    height: 100%;
+	object-fit: contain;
+	border-radius: 15px;
+		border-radius: 15px;
+	border: 4px double rgb(0, 0, 0);
+}
+#tools .banner .slider2 .item img{
+    width: 100%;
+    height: 100%;
+	object-fit: contain;
+	border-radius: 15px;
+	border: 4px double rgb(0, 0, 0);
+}
+
+#tools .banner .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* height: 100vh; */
+    /* transform: translateX(-50%); */
+    width: min(1400px, 100vw);
+    height: max-content;
+    /* padding-bottom: 100px; */
+    display: flex
+;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+}
+
+#tools .banner .content h1{
+    font-family: 'ICA Rubrik';
+    font-size: 16em;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+}
+#tools .banner .content h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: 'Technologies & Tools';
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+}
+#tools .banner .content .author{
+    font-family: Poppins;
+    text-align: right;
+    max-width: 200px;
+}
+#tools .banner .content h2{
+    font-size: 3em;
+}
+#tools .banner .content .model {
+    background-image: url(https://www.vision3d.in/assets/images/main_section1-img.png);
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+    display: block;
+}
+
+@media screen and (max-width: 1023px) {
+		#tools .banner .slider2,
+    #tools .banner .slider{
+        width: 160px;
+        height: 200px;
+        left: calc(50% - 80px);
+    }
+		#tools .banner .slider2 .item,
+    #tools .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(300px);
+    }
+    #tools .banner .content h1{
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 10px 20px #000;
+        font-size: 7em;
+    }
+    #tools .banner .content .author{
+        color: #fff;
+        padding: 20px;
+        text-shadow: 0 10px 20px #000;
+        z-index: 2;
+        max-width: unset;
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+		#tools .banner .slider2,
+    #tools .banner .slider{
+        width: 100px;
+        height: 150px;
+        left: calc(50% - 50px);
+    }
+		#tools .banner .slider2 .item,
+    #tools .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(180px);
+    }
+    #tools .banner .content h1{
+        font-size: 5em;
+    }
+}
+
+
+/* test image background */
+
+#tools .item img {
+/* 	    background: linear-gradient(to right, #13182a, #171733, #1a173e); */
+/* 	background: whitesmoke; */
+		background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+	width: 100%;
+	height: auto;
+}
+
+#tools .item {
+        background: #ffffff;
+        background: radial-gradient(circle, rgba(255, 255, 255, 1) 22%, rgb(194 193 216) 64%, rgba(80, 36, 143, 1) 85%, rgba(24, 11, 84, 1) 100%);
+}
+
+
+#tools .container {
+    height: 100%;
+    width: 100%;
+}
+
+#tools {
+    padding: 0;
+}
