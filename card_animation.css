@@ -7,7 +7,7 @@
     text-align: center;
     overflow: hidden;
     position: relative;
-		background: linear-gradient(to right, #aea642, #ae2828, #620b65);
+    background: linear-gradient(to right, #212041, #100c23, #1d091e);
 }
 #tools .banner .slider{
     position: absolute;
