@@ -92,7 +92,8 @@ main section p, main section li {
 /* Home Section */
 #home {
   text-align: center;
-  background: linear-gradient(to right, #540a0a, #6b1414, #540909);
+  /* background: linear-gradient(to right, #540a0a, #6b1414, #540909); */
+  background: transparent;
 }
 
 #home h1 {
