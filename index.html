@@ -26,67 +26,68 @@
 </head>
 
 <body class="dark-theme">
-    <header>
-        <nav>
-            <div class="header_logo">
-                <img src="assets/images/logo_jair_transparent.svg" alt="Jair Logo" />
-            </div>
-            <div class="header_nav">
-                <ul>
-                    <li><a href="#home" class="button">
-                            <div>Home</div>
-                        </a></li>
-                    <li><a href="#services" class="button">
-                            <div>Services</div>
-                        </a></li>
-                    <li><a href="#portfolio" class="button">
-                            <div>Portfolio</div>
-                        </a></li>
-                    <li><a href="#tools" class="button">
-                            <div>Tools</div>
-                        </a></li>
-                    <li><a href="#certificates" class="button">
-                            <div>Certificates</div>
-                        </a></li>
-                    <li><a href="#about" class="button">
-                            <div>About Me</div>
-                        </a></li>
-                    <li><a href="#contact" class="button">
-                            <div>Contact</div>
-                        </a></li>
-                </ul>
-            </div>
-            <div class="header_cta">
-                <a href="#">Send me a Message!</a>
-            </div>
-        </nav>
+    <div class="background-gradient">
+        <img src="assets/images/gradient.png" alt="gradient">
+        <div class="layer-blur"></div>
+    </div>
+    <div class="header-container">
+        <header>
+            <nav>
+                <div class="header_logo">
+                    <img src="assets/images/logo_jair_transparent.svg" alt="Jair Logo" />
+                </div>
+                <div class="header_nav">
+                    <ul>
+                        <li><a href="#home" class="home button">
+                                <div>Home</div>
+                            </a></li>
+                        <li><a href="#services" class="services button">
+                                <div>Services</div>
+                            </a></li>
+                        <li><a href="#portfolio" class="portfolio button">
+                                <div>Portfolio</div>
+                            </a></li>
+                        <li><a href="#tools" class="tools button">
+                                <div>Tools</div>
+                            </a></li>
+                        <li><a href="#certificates" class="certificates button">
+                                <div>Certificates</div>
+                            </a></li>
+                        <li><a href="#about" class="about button">
+                                <div>About Me</div>
+                            </a></li>
+                        <li><a href="#contact" class="contact button">
+                                <div>Contact</div>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="header_cta">
+                    <a href="#">Send me a Message!</a>
+                </div>
+            </nav>
 
-    </header>
-
+        </header>
+    </div>
     <main>
-        <div class="container">
+        <div class="container" id="main_container">
             <!-- HOME SECTION -->
             <div class="indicator">
-                <a href="#home" class="indicator_circle"></a>
-                <a href="#services" class="indicator_circle"></a>
-                <a href="#portfolio" class="indicator_circle"></a>
-                <a href="#tools" class="indicator_circle"></a>
-                <a href="#certificates" class="indicator_circle"></a>
-                <a href="#about" class="indicator_circle"></a>
-                <a href="#contact" class="indicator_circle"></a>
+                <a href="#home" class="home indicator_circle"></a>
+                <a href="#services" class="services indicator_circle"></a>
+                <a href="#portfolio" class="portfolio indicator_circle"></a>
+                <a href="#tools" class="tools indicator_circle"></a>
+                <a href="#certificates" class="certificates indicator_circle"></a>
+                <a href="#about" class="about indicator_circle"></a>
+                <a href="#contact" class="contact indicator_circle"></a>
             </div>
             <section class="full-page" id="home">
 
-                <div class="container">
+                <div class="container" id="introduction-message">
                     <div>
                         <h1>Hello, I'm Jair Orduña</h1>
-                        <p>Junior Software Developer, Full Stack Developer<br>& QA Team Lead</p>
+                        <p class="description">Junior Software Developer, Full Stack Developer<br>& QA Team Lead</p>
                     </div>
-                    <div class="photo-card-container">
-                        <div class="photo-card">
-                            <img src="assets/images/jair_photo_formal.png" alt="Jair Photo" class="jair_photo_formal" />
-                        </div>
-                    </div>
+
                     <div class="shooting-stars">
                         <div class="stars"></div>
                         <div class="shooting-star"></div>
@@ -319,6 +320,11 @@
                         solutions,
                         I
                         thrive on crafting quality-driven, user-centered digital experiences.</p>
+                    <div class="photo-card-container">
+                        <div class="photo-card">
+                            <img src="assets/images/jair_photo_formal.png" alt="Jair Photo" class="jair_photo_formal" />
+                        </div>
+                    </div>
                 </div>
             </section>
 
