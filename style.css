@@ -22,7 +22,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Header and Navigation */
@@ -67,7 +67,8 @@ nav ul {
 }
 
 nav ul li {
-  display: inline;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 nav ul li .button {
@@ -93,14 +94,14 @@ main section {
 main section h2 {
   font-size: 2rem;
   margin-bottom: 15px;
-  color: #00bcd4;
+  color: #6256c1;
 }
 
 main section h3 {
   font-size: 1.3rem;
   margin-top: 20px;
   margin-bottom: 5px;
-  color: #80deea;
+  color: #463d8c;
 }
 
 main section p, main section li {
@@ -220,6 +221,8 @@ main>div.container {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
+    position: relative;
+    scroll-snap-align: start;;
 }
 
 
@@ -379,3 +382,73 @@ div.header_nav ul section:target {
   rotate : -30deg;
   z-index: -1;
 } 
+
+.spline-container {
+    width: 900px;
+    height: 700px;
+    position: relative;
+    overflow: clip;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+}
+
+.spline-container .robot-3d {
+    width: 120%;
+    height: 130%;
+    position: absolute;
+    bottom: -8%;
+    right: -12%;
+}
+
+#home .container {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+section#home {
+  padding-top: 180px;
+}
+
+
+
+
+
+
+/* header updates */
+
+
+#introduction-message .intro-text {
+    text-align: left;
+    color: #ffffff;
+    font-size: 5rem;
+}
+
+#introduction-message .intro-text h2 {
+    font-size: 40px;
+    margin: 0;
+}
+
+#introduction-message .intro-text h1 {
+    font-size: 60px;
+}
+
+#introduction-message .intro-text p {
+    font-size: 25px;
+}
+
+.indicator_circle {
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.indicator_circle.active {
+  background: white;
+  transform: scale(1.4);
+}
+
+.header-container .header_nav .active-nav {
+  color: #a7a7a7;
+}

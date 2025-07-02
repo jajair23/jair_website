@@ -23,6 +23,10 @@
     <link rel="icon" href="assets/images/logo_jair_transparent.svg" type="image/svg">
 
     <script src="script.js" defer></script>
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.19/build/spline-viewer.js"></script>
+
+
 </head>
 
 <body class="dark-theme">
@@ -38,26 +42,26 @@
                 </div>
                 <div class="header_nav">
                     <ul>
-                        <li><a href="#home" class="home button">
-                                <div>Home</div>
+                        <li><a href="#home" data-index="0" class="nav-btn button">
+                                Home
                             </a></li>
-                        <li><a href="#services" class="services button">
-                                <div>Services</div>
+                        <li><a href="#services" data-index="1" class="nav-btn button">
+                                Services
                             </a></li>
-                        <li><a href="#portfolio" class="portfolio button">
-                                <div>Portfolio</div>
+                        <li><a href="#portfolio" data-index="2" class="nav-btn button">
+                                Portfolio
                             </a></li>
-                        <li><a href="#tools" class="tools button">
-                                <div>Tools</div>
+                        <li><a href="#tools" data-index="3" class="nav-btn button">
+                                Tools
                             </a></li>
-                        <li><a href="#certificates" class="certificates button">
-                                <div>Certificates</div>
+                        <li><a href="#certificates" data-index="4" class="nav-btn button">
+                                Certificates
                             </a></li>
-                        <li><a href="#about" class="about button">
-                                <div>About Me</div>
+                        <li><a href="#about" data-index="5" class="nav-btn button">
+                                About Me
                             </a></li>
-                        <li><a href="#contact" class="contact button">
-                                <div>Contact</div>
+                        <li><a href="#contact" data-index="6" class="nav-btn button">
+                                Contact
                             </a></li>
                     </ul>
                 </div>
@@ -72,20 +76,26 @@
         <div class="container" id="main_container">
             <!-- HOME SECTION -->
             <div class="indicator">
-                <a href="#home" class="home indicator_circle"></a>
-                <a href="#services" class="services indicator_circle"></a>
-                <a href="#portfolio" class="portfolio indicator_circle"></a>
-                <a href="#tools" class="tools indicator_circle"></a>
-                <a href="#certificates" class="certificates indicator_circle"></a>
-                <a href="#about" class="about indicator_circle"></a>
-                <a href="#contact" class="contact indicator_circle"></a>
+                <a href="#home" data-index="0" class="indicator_circle"></a>
+                <a href="#services" data-index="1" class="indicator_circle"></a>
+                <a href="#portfolio" data-index="2" class="indicator_circle"></a>
+                <a href="#tools" data-index="3" class="indicator_circle"></a>
+                <a href="#certificates" data-index="4" class="indicator_circle"></a>
+                <a href="#about" data-index="5" class="indicator_circle"></a>
+                <a href="#contact" data-index="6" class="indicator_circle"></a>
             </div>
             <section class="full-page" id="home">
 
                 <div class="container" id="introduction-message">
-                    <div>
-                        <h1>Hello, I'm Jair Orduña</h1>
+
+                    <div class="intro-text">
+                        <h2>Hello, I'm</h2>
+                        <h1>Jair Orduña</h1>
                         <p class="description">Junior Software Developer, Full Stack Developer<br>& QA Team Lead</p>
+                    </div>
+                    <div class="spline-container">
+                        <spline-viewer class="robot-3d"
+                            url="https://prod.spline.design/BnR7xKNwbzP-RnC4/scene.splinecode"></spline-viewer>
                     </div>
 
                     <div class="shooting-stars">
