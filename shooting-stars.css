@@ -49,6 +49,7 @@ body {
   height: 2px;
   background: linear-gradient(-90deg, white, transparent);
   /* animation: shoot 3s infinite ease-in; */
+  display: none;
 }
 
 .shooting-star:nth-child(1) {
